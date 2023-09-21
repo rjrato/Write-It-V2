@@ -1,0 +1,435 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-image: url("createArea.jpg");
+  background-size:cover;
+  padding: 0 16px;
+}
+
+header {
+  background-color: #3085C3;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.header-h1 {
+  color: #FFF6E0;
+  font-family: "Montserrat", sans-serif;
+  font-weight:bold;
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+.header-user-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-user-info span {
+  font-size: 0.7em;
+}
+
+.header-user-info h5 {
+  font-size: 0.5em;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #3085C3;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #FFF6E0;
+  position: relative;
+  margin: auto;
+}
+
+.note {
+  background: #f2e340;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+
+.note h1 {
+  color: #3085C3;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  color: #61677A;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  background: none;
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #352F44;
+  border: none;
+  transition: color 0.5s;
+}
+
+.note button:hover {
+  color: #9DB2BF;
+  cursor: pointer;
+}
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #f2e340;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.create-note input {
+  resize: none;
+}
+
+form.create-note textarea {
+  resize: vertical;
+}
+
+form.create-note input,
+form.create-note textarea {
+  background: #f2e340;
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+}
+
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #3085C3;
+  color: #FAF2D3;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.5s;
+}
+
+form.create-note button:hover {
+  background: #5CD2E6;
+}
+
+.welcome-screen {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-container {
+  background: url("welcomeScreen.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 20px 30px 20px 500px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-container-h1,
+.welcome-container-subtitle,
+.welcome-container-login,
+.welcome-container-register-h2 {
+  color:#fff;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+
+.welcome-container-sub-subtitle {
+  color:#f2e340;
+  font-family: "Montserrat", sans-serif;
+  font-weight:700;
+}
+
+.welcome-container-h5 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  margin: 20px 90px 0px;
+  transition: all 0.5s ease;
+}
+
+.welcome-container-h5:hover {
+  transform:scale(1);
+  -webkit-transform: scale(1.1);
+  cursor: pointer;
+}
+
+.content-wrapper-blur {
+  filter: blur(8px);
+}
+
+.content-wrapper {
+  transition: filter 0.3s ease;
+}
+
+.welcome-input {
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.7);
+  width: 250px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(85, 78, 78);
+  font-weight: 300;
+}
+
+.welcome-container-button {
+  border: 0;
+  padding: 10px 15px;
+  outline: 0;
+  border-radius: 3px;
+  width: 250px;
+  font-size: 18px;
+  height: calc(var(--base-size) * 40);
+  background-color: var(--primary-color);
+  border: 3px solid #fff;
+  border-radius: calc(var(--base-size) * 4);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.welcome-container-button:hover {
+  background-color: #f2e340;
+  color: #3d3d3d;
+}
+
+.blur-background {
+  filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+
+  .welcome-container {
+    position: fixed;
+    top: 50px;
+    background: url("welcomeScreen.jpg");
+    background-size:cover;
+    padding: 0px;
+    border-radius: 10px;
+    height: 40%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  body {
+    background-image: url("createArea.jpg");
+    background-size:cover;
+    padding: 0;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header {
+    width: 100%;
+    background-color: #3085C3;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .header-h1,
+  .header-user-info,
+  .header-user-info span,
+  .header-user-info h5 {
+    display: inline-block;
+    width: 100%;
+    color: #FFF6E0;
+    font-family: "Montserrat", sans-serif;
+    font-weight:bold;
+    font-size: 1.4rem;
+  }
+  
+  .header-user-info {
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .header-user-info span {
+    font-size: 0.7em;
+  }
+  
+  .header-user-info h5 {
+    font-size: 0.5em;
+    cursor: pointer;
+  }
+
+  .note h1 {
+    color: #3085C3;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .note {
+    background: #f2e340;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    margin-top: 40px;
+    width: 240px;
+    margin: 16px;
+    align-content: center;
+  }
+
+  form.create-note {
+    width: 80%;
+    margin: 30px auto 20px auto;
+    background: #f2e340;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+  }
+
+  .welcome-container {
+    position: fixed;
+    top: 5px;
+    background: url("welcomeScreen.jpg");
+    background-size:cover;
+    padding: 0px;
+    border-radius: 10px;
+    height: 30%;
+    width: 95%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .welcome-container-h1 {
+    display: inline-block;
+    width: 100%;
+    margin-top: 75%;
+    font-size: 2rem;
+    padding: 5px;
+  }
+
+  .welcome-container-subtitle,
+  .welcome-container-login,
+  .welcome-container-register-h2 {
+    color:#fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .welcome-container-sub-subtitle {
+    color:#f2e340;
+    font-family: "Montserrat", sans-serif;
+    font-weight:700;
+  }
+
+  .welcome-container-h5 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    margin: 20px 90px 0px;
+    transition: all 0.5s ease;
+  }
+
+  .welcome-container-h5:hover {
+    transform:scale(1);
+    -webkit-transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 376px) {
+
+  .welcome-container {
+    position: fixed;
+    top: 5px;
+    background: url("welcomeScreen.jpg");
+    background-size:cover;
+    padding: 0px;
+    border-radius: 10px;
+    height: 30%;
+    width: 95%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .welcome-container-h1 {
+    display: inline-block;
+    width: 100%;
+    margin-top: 60%;
+    font-size: 1.4rem;
+    padding: 5px;
+  }
+
+  .welcome-container-subtitle,
+  .welcome-container-login,
+  .welcome-container-register-h2 {
+    color:#fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .welcome-container-sub-subtitle {
+    color:#f2e340;
+    font-family: "Montserrat", sans-serif;
+    font-weight:700;
+  }
+
+  .welcome-container-h5 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    margin: 20px 90px 0px;
+    transition: all 0.5s ease;
+  }
+
+  .welcome-container-h5:hover {
+    transform:scale(1);
+    -webkit-transform: scale(1.1);
+    cursor: pointer;
+  }
+
+}
