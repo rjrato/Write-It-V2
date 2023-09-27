@@ -17,6 +17,15 @@
           "appId": "d5szd7d1p2cwb",
           "type": "cicd"
         }
+      },
+      "function": {
+        "writeitv2server": {
+          "deploymentBucketName": "amplify-writeitv2-dev-175032-deployment",
+          "s3Key": "amplify-builds/writeitv2server-576b58657a5459557570-build.zip"
+        }
+      },
+      "api": {
+        "apilogin": {}
       }
     }
   }

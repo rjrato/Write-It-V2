@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/api/login": {
+      "name": "/api/login",
+      "lambdaFunction": "writeitv2server",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
