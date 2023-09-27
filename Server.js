@@ -10,8 +10,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'build')));
 
+const CORS_URL = process.env.CORS_URL;
+
 const corsOptions = {
-  origin: 'http://write-it.us-east-1.elasticbeanstalk.com',
+  origin: CORS_URL,
   optionsSuccessStatus: 204
 }
 app.use(cors(corsOptions));

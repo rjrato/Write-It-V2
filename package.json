@@ -1,5 +1,5 @@
 {
-  "name": "write-it",
+  "name": "write-it-v2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +7,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.0",
+    "aws-amplify": "^5.3.11",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
@@ -19,7 +20,9 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "node Server.js",
+    "start": "concurrently \"npm:server\" \"npm:index\"",
+    "server": "node server.js",
+    "index": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -41,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
   }
 }
