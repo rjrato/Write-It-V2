@@ -1,3 +1,22 @@
+# Write It V2
+
+## Description
+This project is a natural update from V1, which was ineffective in its original form. The initial concept was promising, but the application fell short of expectations due to the lack of data persistence. Now, having implemented it with the MERN stack—MongoDB, Express.js, React.js, and Node.js—you can register, log in, log off, and keep notes for future reference. With a refreshed UI, I've taken the Write-It app to the next level.
+
+## Contributing
+All contributions are welcome! Here are some ways you can get started:
+1. Report bugs: If you encounter any bugs, please let me know.
+2. Contribute code: If you are a developer and want to contribute, follow the instructions below to get started!
+3. Suggestions: If you don't want to code but have some awesome ideas, just open up an issue explaining some updates or improvements you would like to see!
+4. Documentation: If you see the need for some additional documentation, feel free to add some!
+
+## Instructions
+1. Fork this repository;
+2. Clone the forked repository;
+3. Add your contributions (code or documentation);
+4. Commit and push;
+5. Wait for pull request to be merged;
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
