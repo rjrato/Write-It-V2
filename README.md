@@ -1,7 +1,7 @@
 # Write It V2
 
 ## Description
-This project is a natural update from V1, which was ineffective in its original form. The initial concept was promising, but the application fell short of expectations due to the lack of data persistence. Now, having implemented it with the MERN stack—MongoDB, Express.js, React.js, and Node.js—you can register, log in, log off, and keep notes for future reference. With a refreshed UI, I've taken the Write-It app to the next level.
+This project is a natural update from V1, which was originally a project from my Web Development Bootcamp, meant to learn react.js. The initial concept was promising, so i decided to take it to the next level by implementing user registration / login and added data persistence. MERN stack used — MongoDB, Express.js, React.js, and Node.js — and now you can register, log in, log off, and keep notes for future reference, with a refreshed UI.
 
 ## Contributing
 All contributions are welcome! Here are some ways you can get started:
@@ -23,11 +23,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+I decided to split this project into two diferent directories: backend and frontend.
 
-### `npm start`
+## `Backend`
 
-Runs the app in the development mode.\
+Run `node server.js` to spin up the backend. Server is running on port 3001.
+
+## `Frontend`
+
+### `npm start` 
+
+Run it to start the frontend in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\

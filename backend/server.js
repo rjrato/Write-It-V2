@@ -1,19 +1,21 @@
 require('dotenv').config();
 const express = require("express");
-const path = require('path');
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const cors = require('cors');
+const cors = require("cors");
 
 const app = express();
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(express.static(path.join(__dirname, 'build')));
 
 const CORS_URL = process.env.CORS_URL;
 
 const corsOptions = {
   origin: CORS_URL,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
   optionsSuccessStatus: 204
 }
 app.use(cors(corsOptions));
@@ -100,7 +102,6 @@ app.post("/api/login", async (req, res) => {
         res.status(401).send("Incorrect password");
       }
     } else {
-      alert("User not found, please confirm your e-mail!")
       res.status(404).send("User not found");
     }
   } catch (err) {
@@ -152,13 +153,13 @@ app.get(`/api/getUserNotes/:userId`, async (req, res) => {
   }
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/build/index.html'));
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
 });
 
 const PORT = process.env.PORT || 3001;
 app.get("/", (req, res) => {
-  res.send("Server is running.");
+  res.send(`Server is running on port ${PORT}.`);
 });
 
 app.listen(PORT, () => {
