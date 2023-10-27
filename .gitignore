@@ -2,12 +2,10 @@
 
 #  backend dependencies
 /backend/node_modules
-/backend/backend.zip
 /backend/.env
 /node_modules
 
 #  frontend dependencies
-/frontend/build
 /frontend/node_modules
 /frontend/.env
 
